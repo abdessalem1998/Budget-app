@@ -1,14 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<div class="d-flex flex-column" style="height:100vh;">
+  <div class="mb-auto d-flex align-items-center justify-content-center h-100">
+    <h1 class="text-center" >CountApp</h1>
+  </div>
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+  <div class="d-flex flex-column mx-3">
+    <%= link_to "Log In", new_user_session_path, class: 'btn btn-primary p-3' %>
+    <%= link_to "sign up", new_user_registration_path, class: 'btn btn-light p-3' %>
+  </div>
 </div>
-
-<%= link_to "New user", new_user_path %>
