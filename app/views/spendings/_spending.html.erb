@@ -1,2 +1,18 @@
 <div id="<%= dom_id spending %>">
+  <div class="card my-3">
+  <div class="row g-0">
+    <div class="col-3 m-3">
+      <p><%= spending.name %></p>
+    </div>
+    <div class="col-6">
+      <div class="card-body">
+        <p class="card-text">Type: <b><%= spending.type.name %></b></p>
+        <p class="card-text"><small class="text-muted"><%= spending.created_at %></small></p>
+      </div>
+    </div>
+    <div class="col-2 d-flex justify-content-center align-items-center">
+      <h2><b>$<%= spending.amount %></b></h2>
+    </div>
+  </div>
+</div>
 </div>

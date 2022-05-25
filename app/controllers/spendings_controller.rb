@@ -12,6 +12,7 @@ class SpendingsController < ApplicationController
   # GET /spendings/new
   def new
     @spending = Spending.new
+    @types = Type.all
   end
 
   # GET /spendings/1/edit
@@ -20,10 +21,10 @@ class SpendingsController < ApplicationController
   # POST /spendings or /spendings.json
   def create
     @spending = Spending.new(spending_params)
-
+    @spending.author_id = current_user.id
     respond_to do |format|
       if @spending.save
-        format.html { redirect_to spending_url(@spending), notice: 'Spending was successfully created.' }
+        format.html { redirect_to spendings_url(@spending), notice: 'Spending was successfully created.' }
         format.json { render :show, status: :created, location: @spending }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +65,6 @@ class SpendingsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def spending_params
-    params.fetch(:spending, {})
+    params.fetch(:spending, {}).permit(:name, :type_id,:amount)
   end
 end

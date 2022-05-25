@@ -20,10 +20,10 @@ class TypesController < ApplicationController
   # POST /types or /types.json
   def create
     @type = Type.new(type_params)
-
+    @type.user_id = current_user.id
     respond_to do |format|
       if @type.save
-        format.html { redirect_to type_url(@type), notice: 'Type was successfully created.' }
+        format.html { redirect_to types_url(@type), notice: 'Type was successfully created.' }
         format.json { render :show, status: :created, location: @type }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -64,6 +64,6 @@ class TypesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def type_params
-    params.fetch(:type, {})
+    params.fetch(:type, {}).permit(:icon, :name)
   end
 end

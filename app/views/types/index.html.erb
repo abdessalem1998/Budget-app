@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Types</h1>
-
-<div id="types">
+<% if false %>
   <% @types.each do |type| %>
     <%= render type %>
     <p>
       <%= link_to "Show this type", type %>
     </p>
   <% end %>
-</div>
+<% end %>
 
-<%= link_to "New type", new_type_path %>
+<div class="d-flex flex-column" style="height:100vh;">
+  <div id="types" class="mb-auto h-100">
+    <% @types.each do |type| %>
+      <%= render type %>
+    <% end %>
+  </div>
+  <div class="p-5 bg-success">
+    <%= link_to "New type", new_type_path,class: 'btn btn-success p-3 w-100 border border-white' %>
+  </div>
+</div>
