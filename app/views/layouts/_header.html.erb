@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-primary p-4 d-flex ">
+  <button type="button" class="btn btn-primary position-absolute">
+  <% if current_page?(types_path) %>
+      <i class="fa fa-home"></i>
+    <% else %>
+    <%= link_to :back do %>
+      back
+    <% end %>
+  <% end %>
+  </button>
+  <div class="w-100">
+    <h3 class="text-center text-white mr-5">
+      <% if current_page?(types_path) %>
+        Types
+      <% end %>
+      <% if current_page?(new_type_path) %>
+        Add New Types
+      <% end %>
+      <% if current_page?(spendings_path) %>
+        Spending
+      <% end %>
+      <% if current_page?(new_spending_path) %>
+        Add New Spending
+      <% end %>
+    </h3>
+  </div>
+</nav>
