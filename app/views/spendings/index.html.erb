@@ -9,6 +9,10 @@
 
 <div class="d-flex flex-column" style="height:100vh;">
   <div id="spendings" class="mb-auto h-100">
+    <div class="d-flex justify-content-between p-3 m-2 border-success">
+      <span>total amount spent</span>
+      <span>$<%= @spendings.sum(:amount) %></span>
+    </div>
     <% @spendings.each do |spending| %>
       <%= render spending %>
     <% end %>
