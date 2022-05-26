@@ -6,5 +6,12 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "types#index" , :as => :my_page
+
+  unauthenticated do
+    root "users#index" 
+  end
+
+  authenticated :user do
+    root "types#index" , :as => :my_page
+  end
 end
