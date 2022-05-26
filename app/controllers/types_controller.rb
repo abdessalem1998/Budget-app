@@ -3,7 +3,7 @@ class TypesController < ApplicationController
   before_action :authenticate_user!
   # GET /types or /types.json
   def index
-    @types = Type.all
+    @types = Type.includes(:spendings).all.where(user_id: current_user.id)
   end
 
   # GET /types/1 or /types/1.json
