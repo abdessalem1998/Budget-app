@@ -3,7 +3,6 @@ class SpendingsController < ApplicationController
   before_action :authenticate_user!
   # GET /spendings or /spendings.json
   def index
-
     @spendings = Spending.all.where(type_id: params[:format])
   end
 
@@ -66,6 +65,6 @@ class SpendingsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def spending_params
-    params.fetch(:spending, {}).permit(:name, :type_id,:amount)
+    params.fetch(:spending, {}).permit(:name, :type_id, :amount)
   end
 end
