@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light bg-primary p-4 d-flex ">
   <button type="button" class="btn btn-primary position-absolute">
-  <% if current_page?(my_page_path) %>
+  <% if  current_page?(types_path) or current_page?(my_page_path) %>
       <i class="fa fa-home" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"></i>
     <% else %>
-    <%= link_to :back do %>
+    <%= link_to my_page_path do %>
       back
     <% end %>
   <% end %>
@@ -16,7 +16,7 @@
       <% if current_page?(new_type_path) %>
         Add New Types
       <% end %>
-      <% if current_page?(spendings_path) %>
+      <% if current_page?(spendings_path(params[:format] || 0)) %>
         Spending
       <% end %>
       <% if current_page?(new_spending_path) %>
