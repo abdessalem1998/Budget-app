@@ -2,13 +2,13 @@
 <div class="d-flex flex-column" style="height:90vh;">
   <div class="mb-auto h-100">
     <div class="field">
-      <%= form.text_field :name,class: 'form-control p-3 border-bottom', placeholder: 'Name' %>
+      <%= form.text_field :name,class: 'form-control p-3 border-bottom', required: true, placeholder: 'Name' %>
     </div>
     <div class="field">
       <%= form.select :type_id, @types.all.collect {|p| [ p.name, p.id ] }, {:prompt => 'Select One Type'}, { :class => 'form-select p-3 border-bottom' } %>
     </div>
     <div class="field">
-      <%= form.text_field :amount,class: 'form-control p-3 border-bottom', placeholder: 'Amount' %>
+      <%= form.text_field :amount,class: 'form-control p-3 border-bottom', placeholder: 'Amount', required: true %>
     </div>
   </div>
   <div class="p-5 bg-success">
