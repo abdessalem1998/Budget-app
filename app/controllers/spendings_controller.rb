@@ -3,7 +3,8 @@ class SpendingsController < ApplicationController
   before_action :authenticate_user!
   # GET /spendings or /spendings.json
   def index
-    @spendings = Spending.all
+
+    @spendings = Spending.all.where(type_id: params[:format])
   end
 
   # GET /spendings/1 or /spendings/1.json
