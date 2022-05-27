@@ -24,7 +24,7 @@ class SpendingsController < ApplicationController
     @spending.author_id = current_user.id
     respond_to do |format|
       if @spending.save
-        format.html { redirect_to spendings_url(@spending), notice: 'Spending was successfully created.' }
+        format.html { redirect_to my_page_path, notice: 'Spending was successfully created.' }
         format.json { render :show, status: :created, location: @spending }
       else
         format.html { render :new, status: :unprocessable_entity }
