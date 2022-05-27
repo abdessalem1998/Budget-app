@@ -1,25 +1,23 @@
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "d-flex flex-column",style:"height:100vh;"}) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="d-flex flex-column" style="height:94vh;">
-  <div class="mb-auto h-100">
-    <div class="field">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control p-3 border-bottom', placeholder: 'email' %>
+    <div class="mb-auto">
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",class: 'form-control p-3 border-bottom', placeholder: 'email' %>
+      </div>
+
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "current-password",class: 'form-control p-3 border-bottom', placeholder: 'password' %>
+      </div>
+
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+      <div class="text-center mt-5">
+        <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+      </div>
+      <% end %>
     </div>
 
-    <div class="field">
-      <%= f.password_field :password, autocomplete: "current-password",class: 'form-control p-3 border-bottom', placeholder: 'password' %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'btn btn-primary p-3 w-100' %>
     </div>
-
-    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-    <div class="text-center mt-5">
-      <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
-    </div>
-    <% end %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "Log in", class: 'btn btn-primary p-3 w-100' %>
-  </div>
-</div>
-<% end %>
+  <% end %>

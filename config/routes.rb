@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :spendings, only: %i[index new]
-  resources :types, only: %i[index new]
+  resources :spendings, only: %i[index new create]
+  resources :types, only: %i[index new create]
   resources :users, only: %i[index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

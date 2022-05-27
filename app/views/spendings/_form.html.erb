@@ -1,5 +1,5 @@
-<%= form_with(model: spending) do |form| %>
-<div class="d-flex flex-column" style="height:90vh;">
+<%= form_with(model: spending, html: {class: "d-flex flex-column",style:"height:100vh;"}) do |form| %>
+
   <div class="mb-auto h-100">
     <div class="field">
       <%= form.text_field :name,class: 'form-control p-3 border-bottom', required: true, placeholder: 'Name' %>
@@ -14,5 +14,5 @@
   <div class="p-5 bg-success">
     <%= form.submit class: 'btn btn-success p-3 w-100 border border-white' %>
   </div>
-</div>
+
 <% end %>
