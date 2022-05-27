@@ -1,0 +1,13 @@
+
+  <div id="spendings" class="mb-auto">
+    <div class="d-flex justify-content-between p-3 m-2 border-success">
+      <span>total amount spent</span>
+      <span>$<%= @spendings.sum(:amount) %></span>
+    </div>
+    <% @spendings.each do |spending| %>
+      <%= render spending %>
+    <% end %>
+  </div>
+  <div class="p-5 bg-success">
+    <%= link_to "New spending", new_spending_path,class: 'btn btn-success p-3 w-100 border border-white' %>
+  </div>

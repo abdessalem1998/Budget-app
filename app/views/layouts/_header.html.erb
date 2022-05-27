@@ -1,0 +1,39 @@
+<nav class="navbar navbar-light bg-primary p-4 d-flex ">
+  <button type="button" class="btn btn-primary position-absolute">
+  <% if  current_page?(types_path) or current_page?(my_page_path) %>
+      <i class="fa fa-home" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"></i>
+    <% else %>
+    <%= link_to my_page_path do %>
+      back
+    <% end %>
+  <% end %>
+  </button>
+  <div class="w-100">
+    <h3 class="text-center text-white mr-5">
+      <% if current_page?(my_page_path) %>
+        Types
+      <% end %>
+      <% if current_page?(new_type_path) %>
+        Add New Types
+      <% end %>
+      <% if current_page?(spendings_path(params[:format] || 0)) %>
+        Spending
+      <% end %>
+      <% if current_page?(new_spending_path) %>
+        Add New Spending
+      <% end %>
+    </h3>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <% if user_signed_in? %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete , class: "btn btn-light ms-3" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
