@@ -1,24 +1,98 @@
-# README
+# CountApp - A Mobile Web App.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> **_Spendit_** is a mobile web application where you can manage your budget. Register, add a spending type and keep track of your spendings for each category. It's that simple.
 
-Things you may want to cover:
+![1](https://user-images.githubusercontent.com/89970442/170606921-db2dbfcd-a502-4beb-b29e-0618e10bb3b5.PNG)
+  ![2](https://user-images.githubusercontent.com/89970442/170606932-fa5f0828-032b-4118-ba85-003e0f802434.PNG)
+  ![3](https://user-images.githubusercontent.com/89970442/170607090-af15a37b-1569-4e71-91ce-ce816121dbdf.PNG)
 
-* Ruby version
 
-* System dependencies
+## Live Link
 
-* Configuration
+[Heroku Link](https://budgetapp2022micr.herokuapp.com/)
 
-* Database creation
+## Video Presentation
 
-* Database initialization
+[Link](https://www.loom.com/share/68a83e236f0a4f309032375ec1b364ea)
 
-* How to run the test suite
+## Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby
+- Ruby on Rails
+- bootstrap
 
-* Deployment instructions
+## Getting Started
 
-* ...
+- Getting a local copy is simple. Follow the steps below
+
+### Install
+
+- Ruby
+- Ruby on Rails
+- PostgresSQL
+- Rspec
+
+### Local Copy
+
+- Clone the project
+
+```
+git clone https://github.com/abdessalem1998/Budget-app
+
+```
+
+### Setup
+
+Install gems:
+
+```
+bundle install
+```
+
+Setup database:
+
+```
+rails db:create
+rails db:migrate
+```
+
+### Usage
+
+Start server:
+
+```
+rails server
+```
+
+Visit http://localhost:3000/ in your browser.
+
+### Run tests
+
+```
+rspec
+```
+
+
+## Author
+
+👤 **Houfaf Abdessalem**
+
+- GitHub: [@Houfaf Abdessalem](https://github.com/abdessalem1998)
+- Twitter: [@Houfaf Abdessalem](https://twitter.com/HAbdssalem)
+- LInkedIn: [@Houfaf Abdessalem](https://www.linkedin.com/in/houfafabdessalem/)
+
+## Credits
+
+Original design by [Gregoire Vella](https://www.behance.net/gregoirevella)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./LICENSE.md) licensed.
