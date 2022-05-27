@@ -1,6 +1,6 @@
 # CountApp - A Mobile Web App.
 
-> **_Spendit_** is a mobile web application where you can manage your budget. Register, add a spending type and keep track of your spendings for each category. It's that simple.
+> **_Spendit_ ** is a mobile web application where you can manage your budget. Register, add a spending type and keep track of your spendings for each category. It's that simple.
 
 ![1](https://user-images.githubusercontent.com/89970442/170606921-db2dbfcd-a502-4beb-b29e-0618e10bb3b5.PNG)
   ![2](https://user-images.githubusercontent.com/89970442/170606932-fa5f0828-032b-4118-ba85-003e0f802434.PNG)
