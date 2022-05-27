@@ -1,13 +1,4 @@
-<% if false %>
-  <% @types.each do |type| %>
-    <%= render type %>
-    <p>
-      <%= link_to "Show this type", type %>
-    </p>
-  <% end %>
-<% end %>
 
-<div class="d-flex flex-column" style="height:90vh;">
   <div id="types" class="mb-auto h-100">
     <% @types.each do |type| %>
       <%= link_to spendings_path(type.id) do %>
@@ -18,4 +9,3 @@
   <div class="p-5 bg-success">
     <%= link_to "New type", new_type_path,class: 'btn btn-success p-3 w-100 border border-white' %>
   </div>
-</div>
